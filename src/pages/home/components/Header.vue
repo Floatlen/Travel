@@ -33,6 +33,7 @@ export default {
       .back-icon
         text-align: center
         font-size: .4rem
+        padding: 0 6px
     .header-input
       flex: 1
       height: .64rem

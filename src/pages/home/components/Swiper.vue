@@ -40,6 +40,6 @@ export default {
     height: 0
     padding-bottom: 30.4%
     background #eee
-  .swiper-img
-    width: 100%
+    .swiper-img
+      width: 100%
 </style>

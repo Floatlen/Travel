@@ -62,12 +62,13 @@ export default {
           imgUrl:
             'https://picbed.qunarzz.com/ae617a31e0bd5803d76918b817f6d942.png',
           desc: '自由行'
-        },
-        {
-          id: '0009',
-          imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
-          desc: '景点门票'
         }
+        // ,
+        // {
+        //   id: '0009',
+        //   imgUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png',
+        //   desc: '景点门票'
+        // }
       ]
     }
   },
@@ -93,6 +94,8 @@ export default {
 .icons >>> .swiper-container
   height 0
   padding-bottom 50%
+  .icons
+    margin-top .1rem
   .icon
     position relative
     overflow hidden

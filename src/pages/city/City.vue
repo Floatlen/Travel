@@ -6,14 +6,11 @@
       :cities="cities"
       :hot="hotCities"
       :letter="letter"
-    >
-    </city-list>
+    ></city-list>
     <city-alphabet
       :cities="cities"
       @change="handleLetterChange"
-    >
-
-    </city-alphabet>
+    ></city-alphabet>
   </div>
 </template>
 
@@ -62,6 +59,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl'
 
 </style>

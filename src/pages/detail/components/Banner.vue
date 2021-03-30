@@ -1,18 +1,22 @@
 <template>
   <div>
-    <div class="banner">
-        <img class="banner-img" src="http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg">
-        <div class="banner-info">
-            <div class="banner -tittle">
-                AAAAAAAAAAAAAAAAA
-            </div>
-            <div class="banner-number">
-                <span class="iconfont banner-icon">&#xe629;</span>
-                39
-            </div>
+    <div class="banner" @click="handleBannerClick">
+      <img class="banner-img" :src="bannerImg" />
+      <div class="banner-info">
+        <div class="banner-tittle">
+          {{this.sightName}}
         </div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe629;</span>
+          {{this.bannerImgs.length}}
+        </div>
+      </div>
     </div>
-    <common-gallary></common-gallary>
+      <common-gallary
+        :imgs="bannerImgs"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      ></common-gallary>
   </div>
 </template>
 
@@ -20,6 +24,24 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
+  data () {
+    return {
+      showGallary: false
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+  },
   components: {
     CommonGallary
   }
